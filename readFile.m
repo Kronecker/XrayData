@@ -1,4 +1,4 @@
-function [ obj ] = readFile( fileFormatString, fileNum, path )
+function [ obj ] = readFile(fileNum, path, fileFormatString )
 
 % Props
 timepxName='Timepix';
@@ -9,7 +9,7 @@ startData=1+1+3;  % start + x + timex3
 
 % Fetch Data
 try
-    cont=readXrayScanXfel(fileFormatString, fileNum, path);
+        cont=readXrayScanXfel(fileFormatString, fileNum, path);
 catch me
     
     rethrow(me);

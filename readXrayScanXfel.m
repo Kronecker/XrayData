@@ -3,12 +3,18 @@ function [cont]=readXrayScanXfel(fileFormatString, fileNum, path)
 
 cont=struct;
 
-
-fileName=sprintf(fileFormatString,fileNum);
-cont.fileName=fileName;
+    if(isnumeric(fileNum))
+        fileName=sprintf(fileFormatString,fileNum);        
+    elseif(ischar(fileNum))
+        fileName=fileNum;
+        fileNum=-1;
+    else
+        warning('error');
+    end
+    cont.fileName=fileName;
     cont.path=path;
     cont.fileNum=fileNum;
-
+        
 fileExists=exist(fullfile(path,fileName),'file');
 if(fileExists~=2) % file not found
     if(fileExists==7)  % file does not exist, but a folder
