@@ -1,0 +1,28 @@
+fileName        -  Simple filename. This prop is always set.
+x               -  Contains the x vector of the scan
+timepx          -  Contains the timepx mean values of the scan. If there is no timepix present, these values are all zeros. (This value can be changed directly or through y!)
+dio1            -  Contains the diode1 mean values over all sub time points of the scan. (This value can be changed directly or through y!)
+dio2            -  Contains the diode2 mean values over all sub time points of the scan. (This value can be changed directly or through y!)
+dio3            -  Contains the diode3 mean values over all sub time points of the scan. (This value can be changed directly or through y!)
+y               -  Contains all the mean values in one array. y = [timepx, dio1, dio2, dio3] (This value can be changed directly or through the timepx, dio1 2 3!)
+time            -  Contains the measuring time of the scan. (sum of subtimes)
+subtime         -  Contains the subtime for the diodes. 
+timepoints      -  Number of timepoints due to subtime. 
+timeIsNormalized-  If 1, the data is normalized to 1s measuring time. Only properly set if the normalizeTime() method is used. 
+sub             -  Contains the sub data, due to subtime and multiple measurements of the diodes. 
+subtimepx       - 
+subdio1         - 
+subdio2         - 
+subdio3         - 
+xname           -  The name of motor for the x axis of the scan. 
+yname           -  The name of the used detectors. (Cell)
+log             -  If a log is loaded, it's stored here. Might not be set for a simple scan. 
+fileNum         -  Contains the file num. Only set if the data is loaded via a file num. 
+path            -  Contains the path to the file. 
+timestr         -  Contains the TimeStrings for each timepoint. If timepoints > 0, only the first timestr per x data points is stored. 
+pl              -  Quick properties for the built-in plot functions. 
+talktome        -  Ignored
+timepxId        -  Hidden value, which contains the timepx column number. timepx = y(timepxId)
+dio1Id          -  Hidden value, which contains the diode1 column number. dio1 = y(dio1Id)
+dio2Id          -  Hidden value, which contains the diode2 column number. dio2 = y(dio2Id)
+dio3Id          -  Hidden value, which contains the diode3 column number. dio3 = y(dio3Id)

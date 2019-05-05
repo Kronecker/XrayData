@@ -4,7 +4,7 @@ function [ obj ] = readFile(fileNum, path, fileFormatString )
 timepxName='Timepix';
 timePxCols=2;
 
-dioMeasurePSec=10;
+dioMeasurePSec=10;  % additional Def in readXrayScanXfel
 startData=1+1+3;  % start + x + timex3
 
 % Fetch Data

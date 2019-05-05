@@ -7,8 +7,8 @@ classdef XrayData < handle
         x
     end
     properties (Dependent)
-        timepx
-        dio1
+        timepx % test
+        dio1 %3
         dio2
         dio3
     end
@@ -17,10 +17,11 @@ classdef XrayData < handle
         time
         subtime
         timepoints
+        timeIsNormalized=0
     end
     properties (Hidden)
         timepxId
-        dio1Id
+        dio1Id  %hello there
         dio2Id
         dio3Id
     end
@@ -38,7 +39,7 @@ classdef XrayData < handle
         xname
         yname
         log
-        fileNum
+        fileNum %test2
         path
         timestr
         
@@ -57,9 +58,6 @@ classdef XrayData < handle
             t.sub.dio2Start=[];
             t.sub.dio3Start=[];
             t.sub.dioNums=[];                                    
-        end
-        function help(t)
-            
         end
         function plot(t)
             yyaxis left
@@ -108,7 +106,21 @@ classdef XrayData < handle
         function addlog(t,logFile)
             
         end
+        function normalizeTime(t)
+            t.y=t.y/t.time;
+            t.timeIsNormalized=1;
+        end
     end
-    
+    methods (Static)
+        function help()
+            props=properties('XrayData');
+            for k=1:numel(props)
+                help(sprintf('XrayData.%s',props{k}));
+                
+            end
+     
+        end
+        
+    end
 end
 
