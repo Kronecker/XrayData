@@ -1,0 +1,3 @@
+frameID=0
+expTime=1.0
+recTime=1548065913549
