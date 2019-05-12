@@ -4,7 +4,7 @@ if(~exist('fileNum','var'))
 end
 path='SampleData';
 
-[t]=readFile(fileNum, path, fileFormatString)
+[t]=readFile(fileFormatString,fileNum, path )
 %[t]=readFile('scan0126.dat', path, fileFormatString)
 
 %t=readXrayScanXfel(fileFormatString, fileNum, path)

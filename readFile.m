@@ -1,4 +1,11 @@
-function [ obj ] = readFile(fileNum, path, fileFormatString )
+function [ obj ] = readFile(varargin)
+%readFile readsFile from Kais XrayScan for Xfel and creates XrayData Object
+%from it
+% [ XrayData ] = readFile(fileFormatString, fileNum, path)
+% [ XrayData ] = readFile(fileName, path)
+narginchk(2,3);
+
+
 
 % Props
 timepxName='Timepix';
@@ -7,13 +14,21 @@ timePxCols=2;
 dioMeasurePSec=10;  % additional Def in readXrayScanXfel
 startData=1+1+3;  % start + x + timex3
 
+
+
+
 % Fetch Data
 try
-        cont=readXrayScanXfel(fileFormatString, fileNum, path);
+        cont=readXrayScanXfel(varargin{:});
 catch me
-    
-    rethrow(me);
+    rethrow(me);    
 end
+
+
+
+
+
+
 obj=XrayData();
 
 % Convert to obj
@@ -46,10 +61,10 @@ elseif(timepxId~=1)
     warning(['Putting timepx data to the first column']);
     tempCount(timepxId)=[];
     obj.yname=[ynames(timepxId),ynames(tempCount)];
-    obj.y=[cont.data(:,startData+timepxId-1),cont.data(:,startData+tempCount-1)];        
+    obj.y=[cont.data(:,startData+timepxId-1),cont.data(:,startData+tempCount-1)];
 else
     obj.y=cont.data(:,startData:startData+3);
-    obj.yname=ynames;    
+    obj.yname=ynames;
 end
 obj.timepxId=1;
 obj.dio1Id=2;
@@ -57,7 +72,7 @@ obj.dio2Id=3;
 obj.dio3Id=4;
 
 
-% Determine sub structure 
+% Determine sub structure
 
 numDiodeMeas=round(obj.time*dioMeasurePSec);
 

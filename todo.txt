@@ -1,0 +1,4 @@
+- sind 4 stellen für die scannummern ausreichend?
+- wie wird der timestring konstruiert?
+- SUB data!
+- add: abgleich funktion, rc funktion

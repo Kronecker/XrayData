@@ -1,20 +1,35 @@
-function [cont]=readXrayScanXfel(fileFormatString, fileNum, path)
-
+function [cont]=readXrayScanXfel(varargin)
+%readXrayScanXfel Reads Kais XrayScan for Xfel
+% [dataStruct]=readXrayScanXfel(fileFormatString, fileNum, path)
+% [dataStruct]=readXrayScanXfel(fileName, path)
+narginchk(2,3);
 
 cont=struct;
 
+
+if(nargin==3)
+    fileFormatString=varargin{1};
+    fileNum=varargin{2};
+    path=varargin{3};
     if(isnumeric(fileNum))
-        fileName=sprintf(fileFormatString,fileNum);        
+        fileName=sprintf(fileFormatString,fileNum);
     elseif(ischar(fileNum))
         fileName=fileNum;
-        fileNum=-1;
+        fileNum=[];
     else
         warning('error');
     end
-    cont.fileName=fileName;
-    cont.path=path;
-    cont.fileNum=fileNum;
-        
+elseif(nargin==2)
+    fileName=varargin{1};
+    path=varargin{2};
+    fileNum=[];
+end
+
+
+cont.fileName=fileName;
+cont.path=path;
+cont.fileNum=fileNum;
+
 fileExists=exist(fullfile(path,fileName),'file');
 if(fileExists~=2) % file not found
     if(fileExists==7)  % file does not exist, but a folder
@@ -51,7 +66,7 @@ try
     % If that is not the case, assignment will throw an error Or miss values.
     
     dataFormatString=[repmat('%f',[1, preSubDataColums]), repmat([repmat('%f',[1, numDataPoints+numErrorPoints]),'%s'],[1,numTimePoints])];
- %   dataFormatString2=[repmat('%f',[1,numel(firstLineCell)-1]),'%s']; only for time points =1
+    %   dataFormatString2=[repmat('%f',[1,numel(firstLineCell)-1]),'%s']; only for time points =1
     
     A=textscan(fid,dataFormatString);
     cont.data=cell2mat(A(1:end-1));
@@ -59,7 +74,7 @@ try
     
 catch me
     fclose(fid);
-
+    
     rethrow(me);
 end
 fclose(fid);

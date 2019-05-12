@@ -18,7 +18,7 @@ xname           -  The name of motor for the x axis of the scan.
 yname           -  The name of the used detectors. (Cell)
 log             -  If a log is loaded, it's stored here. Might not be set for a simple scan. 
 fileNum         -  Contains the file num. Only set if the data is loaded via a file num. 
-path            -  Contains the path to the file. 
+path            -  Contains the path to the file. Might be empty [], indicating that the file is somewhere on matlabs search path.
 timestr         -  Contains the TimeStrings for each timepoint. If timepoints > 0, only the first timestr per x data points is stored. 
 pl              -  Quick properties for the built-in plot functions. 
 talktome        -  Ignored

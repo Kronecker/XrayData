@@ -59,22 +59,56 @@ classdef XrayData < handle
             t.sub.dio3Start=[];
             t.sub.dioNums=[];                                    
         end
-        function plot(t)
-            yyaxis left
-            plot(t.x, t.y(:,2:4));
-            yyaxis right
-            plot(t.x, t.y(:,1));
-        end
-        function extract(t)
+        function plot(t, varargin)
+            narginchk(0,2);
+            legi={};
+            if(nargin==1)            
+                yyaxis left
+                plot(t.x, t.y(:,1));
+                legi(end+1)=t.yname(1);
+                yyaxis right
+                plot(t.x, t.y(:,2:4));
+                legi(end+1:end+3)=t.yname(2:4);
+                legend(legi);
+                yyaxis left
+            elseif (nargin==2)
+                if(ischar(varargin{1}))  %|| isstring(varargin{1})
+                    plot(t.x, t.(varargin{1}));
+                    legend(varargin{1});
+                elseif (isnumeric(varargin{1}))
+                    
+                    plot(t.x, t.y(:,varargin{1}));                    
+                    legend(t.yname(varargin{1}));
+                end
+            else
+                
+                
+            end
             
         end
-        function normalize(t)
-            
+        function [data, time, subtime, timepoints,timestr]=extract(t)
+            data=[t.x,t.y];
+            time=t.time;
+            subtime=t.subtime;
+            timepoints=t.timepoints;
+            timestr=t.timestr;                                               
+        end
+        function normalize(t, detector)
+            if(isnumeric(detector))
+                t.y=t.y./repmat(t.y(:,detector),[1,size(t.y,2)]);
+            elseif ischar(detector)
+                t.y=t.y./repmat(t.(detector),[1,size(t.y,2)]);
+            end
         end
         function fit(t)
             
         end
         function getData(t)
+            
+        end
+        
+        function getNumFromName(t,endPre, startPost)
+            
             
         end
         
