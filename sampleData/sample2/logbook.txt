@@ -1,0 +1,608 @@
+name	scan0001.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	1
+start time	14.05.2019 14:41:27
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0002.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	1
+start time	14.05.2019 14:49:29
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0003.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	1
+start time	14.05.2019 14:55:54
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0004.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	1
+start time	14.05.2019 15:02:11
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0005.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	1
+start time	14.05.2019 15:05:40
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0006.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	1
+start time	14.05.2019 15:09:50
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0007.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	1
+start time	14.05.2019 15:10:25
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0008.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	1
+start time	14.05.2019 15:11:17
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0009.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	1
+start time	14.05.2019 15:16:12
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0010.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	11
+start time	14.05.2019 15:17:27
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0011.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	11
+start time	14.05.2019 15:21:59
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0012.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	11
+start time	14.05.2019 15:29:05
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0013.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	11
+start time	14.05.2019 15:29:35
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0014.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	11
+start time	14.05.2019 15:30:55
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0015.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	11
+start time	14.05.2019 15:37:37
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0016.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	11
+start time	14.05.2019 19:45:56
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0017.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	11
+start time	14.05.2019 19:51:28
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0018.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	5
+start time	14.05.2019 19:57:03
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0019.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	5
+start time	14.05.2019 20:04:37
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0020.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	5
+start time	14.05.2019 20:05:41
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0021.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	5
+start time	14.05.2019 20:08:02
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0022.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	5
+start time	14.05.2019 20:08:32
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0023.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+step size	11
+start time	14.05.2019 20:23:43
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0024.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	11
+start time	14.05.2019 20:25:03
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0025.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	11
+start time	14.05.2019 20:27:15
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0026.dat
+scan description	dummy1D
+time constant	1
+wait time	0
+range	10
+ 	0
+points	11
+start time	14.05.2019 21:41:28
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0027.dat
+scan description	PhaseAzimuth1D
+time constant	0.5
+wait time	0
+range	0.4
+ 	0
+step size	0.01
+start time	15.05.2019 11:16:17
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0028.dat
+scan description	PhaseAzimuth1D
+time constant	0.5
+wait time	0
+range	0.4
+ 	0
+step size	0.01
+start time	15.05.2019 11:19:11
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0029.dat
+scan description	PhaseAzimuth1D
+time constant	0.5
+wait time	0
+range	0.4
+ 	0
+step size	0.01
+start time	15.05.2019 11:22:11
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0030.dat
+scan description	PhaseAzimuth1D
+time constant	0.5
+wait time	0
+range	0.4
+ 	0
+step size	0.01
+start time	15.05.2019 11:24:12
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0031.dat
+scan description	PhaseAzimuth1D
+time constant	0.5
+wait time	0
+range	0.4
+ 	0
+step size	0.01
+start time	15.05.2019 11:25:40
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0
+name	scan0032.dat
+scan description	PhaseAzimuth1D
+time constant	0.5
+wait time	0
+range	0.4
+ 	0
+step size	0.01
+start time	15.05.2019 11:27:58
+TLateral	-0.005
+Theta 1er Krist	0
+PhaseAzimuth	-0.965
+Translation 4	0
+THoehe	0
+AnaAzi	0
+PhaseTheta	0
+Motor 8	0
+eta	0
+anath	0
+dummy	0

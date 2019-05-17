@@ -1,0 +1,12 @@
+# ignore matlab aotu save
+*.asv
+
+*.xml
+
+#ignore binaries
+*.bin
+
+#ignore temp folders
+tmpMtlb*/
+
+*.xml

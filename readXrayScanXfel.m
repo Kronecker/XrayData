@@ -56,21 +56,30 @@ try
     firstLineCell=strsplit(firstLine,'\t');
     
     numTimePoints=str2double(firstLineCell{4});
-    timePerSub=str2double(firstLineCell{3});
+    subtime=str2double(firstLineCell{3});
     dioMeasurePSec=10;
-    numDataPoints=(timePerSub)*dioMeasurePSec*3+3+2; %diodeX3 + timePix(2)
-    numErrorPoints=timePerSub*dioMeasurePSec*3+1;
-    preSubDataColums=[1+3+3]; % start + timex3 + meanx3
+    numMeanPoints=4;
+    numDataPoints= subtime*dioMeasurePSec*3; % meanx4 + subtime*3diode
+    
+    numErrorPoints=subtime*dioMeasurePSec*3;
+    preSubDataColums=[1+3+4]; % start + timex3 + meanx4
     
     % Assuming, that number of elements is always the same for all columns!
     % If that is not the case, assignment will throw an error Or miss values.
     
-    dataFormatString=[repmat('%f',[1, preSubDataColums]), repmat([repmat('%f',[1, numDataPoints+numErrorPoints]),'%s'],[1,numTimePoints])];
+    dataFormatString=[repmat('%f',[1, preSubDataColums]),  repmat(  repmat('%f',[1, numMeanPoints+numDataPoints+numErrorPoints]) , [1,numTimePoints]  )    '%s'];
     %   dataFormatString2=[repmat('%f',[1,numel(firstLineCell)-1]),'%s']; only for time points =1
     
     A=textscan(fid,dataFormatString);
     cont.data=cell2mat(A(1:end-1));
     cont.timestr=A{end};
+    cont.numTimePoints=numTimePoints;
+    cont.numErrorPoints=numErrorPoints;
+    cont.numDataPoints=numDataPoints;
+    cont.numMeanPoints=numMeanPoints;
+    cont.subtime=subtime;
+    cont.dioMeasurePSec=dioMeasurePSec;
+    
     
 catch me
     fclose(fid);

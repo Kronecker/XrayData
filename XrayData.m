@@ -27,8 +27,10 @@ classdef XrayData < handle
     end
     properties
         sub=struct()
+        timepixData
     end
     properties (Dependent)
+        
         subtimepx
         subdio1
         subdio2
@@ -42,6 +44,9 @@ classdef XrayData < handle
         fileNum %test2
         path
         timestr
+        scanstruct=struct();
+        timepixCurTempDir
+        user=struct()
         
         pl
         talktome=false
@@ -52,17 +57,30 @@ classdef XrayData < handle
     methods
         function t=XrayData()
             t.sub.y=[];
+            t.sub.yMean=[];
             t.sub.timepixStart=[];
             t.sub.timepixNums=[];
             t.sub.dio1Start=[];
             t.sub.dio2Start=[];
             t.sub.dio3Start=[];
-            t.sub.dioNums=[];                                    
+            t.sub.dioNums=[];
+            t.sub.errors=[];
+            
+            t.scanstruct.numTimePoints=[];
+            t.scanstruct.numErrorPoints=[];
+            t.scanstruct.numDataPoints=[];
+            t.scanstruct.subtime=[];
+            t.scanstruct.dioMeasurePSec=[];
+            
+           
+            
+            
+            
         end
         function plot(t, varargin)
             narginchk(0,2);
             legi={};
-            if(nargin==1)            
+            if(nargin==1)
                 yyaxis left
                 plot(t.x, t.y(:,1));
                 legi(end+1)=t.yname(1);
@@ -77,7 +95,7 @@ classdef XrayData < handle
                     legend(varargin{1});
                 elseif (isnumeric(varargin{1}))
                     
-                    plot(t.x, t.y(:,varargin{1}));                    
+                    plot(t.x, t.y(:,varargin{1}));
                     legend(t.yname(varargin{1}));
                 end
             else
@@ -91,7 +109,7 @@ classdef XrayData < handle
             time=t.time;
             subtime=t.subtime;
             timepoints=t.timepoints;
-            timestr=t.timestr;                                               
+            timestr=t.timestr;
         end
         function normalize(t, detector)
             if(isnumeric(detector))
@@ -144,6 +162,180 @@ classdef XrayData < handle
             t.y=t.y/t.time;
             t.timeIsNormalized=1;
         end
+        
+        function extractTimePixData(t)
+            
+            scanName=t.fileName;
+            
+            
+            splitname=strsplit(scanName,'.');
+            
+            if(splitname{1}(end)=='t')
+                splitname{1}=splitname{1}(1:end-1);
+            end
+            
+            tempDirName=['tmpMtlb_',splitname{1}];
+            mkdir(tempDirName);
+            t.timepixCurTempDir=fullfile(pathForTempFiles,tempDirName);
+            dd=dir(t.path);
+            for k=1:numel(dd)
+                if(dd(k).isdir)
+                    continue;
+                end
+                curNameSplit=strsplit(dd(k).name,'.');
+                if(~strcmp(curNameSplit{end},'zip'))
+                    continue;
+                end
+                if(strfind(dd(k).name,splitname{1}))
+                    unzip(fullfile(t.path,dd(k).name),t.timepixCurTempDir);
+                end
+            end
+            
+            
+        end
+        function readInTimePixData(t, varargin)
+            if(nargin==1)
+                countTimePix=@(data) sum(sum(data(1:end,1:end)));
+            end
+            if(nargin==2)
+                countTimePix=varargin{1};
+            end
+            if(nargin>2)
+               countTimePix=@(data) varargin{1}(data,varargin{2:end}); 
+            end
+            
+            if(isempty(t.timepixCurTempDir))
+                t.extractTimePixData();
+            end
+            
+            startAtIndex=0;
+            nameFormatStr='frame_value_%d.bin';
+            
+            dd=dir(t.timepixCurTempDir);            
+            binariesInDir=0;
+            for k=1:numel(dd)
+                if(dd(k).isdir) 
+                    continue; 
+                end
+                ext=strsplit(dd(k).name,'.');
+                if(strcmp(ext{end},'bin'))
+                    binariesInDir=binariesInDir+1;
+                end                
+            end
+            maxFails=5;
+            
+            
+            % 1. Try starting at zero
+            k=0;
+            fails=0;
+            l=1;
+            t.timepixData=[];
+            
+            while(k<binariesInDir)
+                
+                fileName=fullfile(t.timepixCurTempDir,sprintf(nameFormatStr,k+startAtIndex));
+                if(exist(fileName, 'file'))
+                    data=readTimepix(fileName);
+                    fails=0;
+                else
+                    fails=fails+1;
+                    if(fails>=maxFails)
+                        break;
+                    end
+                end
+                k=k+1;
+                
+                if(l==1)
+                    tempdata=countTimePix(data);
+                    t.timepixData=zeros([size(tempdata),binariesInDir]);
+                    t.timepixData(:,:,l)=tempdata;
+                else
+                    t.timepixData(:,:,l)=countTimePix(data);
+                end
+                
+                l=l+1;
+                
+               % figure(777);
+               % imagesc(data);
+               % drawnow
+                
+                
+            end
+            
+            
+        end
+        function readInTimePixDataWithSub(t, varargin)
+            if(nargin==1)
+                countTimePix=@(data) sum(sum(data(1:end,1:end)));
+            end
+            if(nargin==2)
+                countTimePix=varargin{1};
+            end
+            if(nargin>2)
+               countTimePix=@(data) varargin{1}(data,varargin{2:end}); 
+            end
+            
+            if(isempty(t.timepixCurTempDir))
+                t.extractTimePixData();
+            end
+            
+            startAtIndex=0;
+            nameFormatStr='frame_value_%d.bin';
+            
+            dd=dir(t.timepixCurTempDir);            
+            binariesInDir=0;
+            for k=1:numel(dd)
+                if(dd(k).isdir) 
+                    continue; 
+                end
+                ext=strsplit(dd(k).name,'.');
+                if(strcmp(ext{end},'bin'))
+                    binariesInDir=binariesInDir+1;
+                end                
+            end
+            maxFails=5;
+            
+            
+            % 1. Try starting at zero
+            k=0;
+            fails=0;
+            l=1;
+            t.timepixData=[];
+            
+            while(k<binariesInDir)
+                
+                fileName=fullfile(t.timepixCurTempDir,sprintf(nameFormatStr,k+startAtIndex));
+                if(exist(fileName, 'file'))
+                    data=readTimepix(fileName);
+                    fails=0;
+                else
+                    fails=fails+1;
+                    if(fails>=maxFails)
+                        break;
+                    end
+                end
+                k=k+1;
+                
+                if(l==1)
+                    tempdata=countTimePix(data);
+                    t.timepixData=zeros([size(tempdata),binariesInDir]);
+                    t.timepixData(:,:,l)=tempdata;
+                else
+                    t.timepixData(:,:,l)=countTimePix(data);
+                end
+                
+                l=l+1;
+                
+               % figure(777);
+               % imagesc(data);
+               % drawnow
+                
+                
+            end
+            
+            
+        end
+        
     end
     methods (Static)
         function help()
@@ -152,7 +344,7 @@ classdef XrayData < handle
                 help(sprintf('XrayData.%s',props{k}));
                 
             end
-     
+            
         end
         
     end

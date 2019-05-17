@@ -37,7 +37,7 @@
                     <key class="java.lang.String">
                         <String class="java.lang.String"/>detectorName</key>
                     <entry class="sophy.core.data.meta.SPStringMetaDataItem">
-                        <data class="java.lang.String"/>SoPhy TPX Dummy Quad<name class="java.lang.String"/>detectorName<flags class="java.util.ArrayList">
+                        <data class="java.lang.String"/>0_G10-W0242-TPX_E10-W0242-TPX_D09-W0242-TPX_I10-W0242-TPX<name class="java.lang.String"/>detectorName<flags class="java.util.ArrayList">
                             <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
                                 <element ID="0">
                                     <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
@@ -55,7 +55,7 @@
                         <data class="sophy.medipix.SPMPXIndexer2D">
                             <lookupTable class="sophy.core.data.SPintegerVector2D">
                                 <data class="[I" externalObject="">
-                                    <label class="java.lang.String"/>0_7c9cf3e1-78de-4ea8-84e5-1c96117f3e99_int[]</data>
+                                    <label class="java.lang.String"/>0_4fbb249e-eb92-4205-ba37-45c69c05eb8a_int[]</data>
                                 <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>512<columns class="java.lang.Integer"/>512<indexer class="sophy.core.data.SPColumnStorageIndexer2D"/>
                             </lookupTable>
                         </data>
@@ -85,6 +85,984 @@
                 </object>
             </element>
             <element ID="5">
+                <object class="sophy.core.xml.SPMapEntry">
+                    <key class="java.lang.String">
+                        <String class="java.lang.String"/>acquisition parameters</key>
+                    <entry class="sophy.medipix.drivers.pxm.SPPXMAcqPars">
+                        <data class="java.util.LinkedHashMap">
+                            <mapArray class="[Lsophy.core.xml.SPMapEntry;">
+                                <element ID="0">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>useHwTimer</key>
+                                        <entry class="sophy.core.data.meta.SPBooleanMetaDataItem">
+                                            <data class="java.lang.Boolean"/>true<name class="java.lang.String"/>useHwTimer<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="1">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>enableCst</key>
+                                        <entry class="sophy.core.data.meta.SPBooleanMetaDataItem">
+                                            <data class="java.lang.Boolean"/>false<name class="java.lang.String"/>enableCst<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="2">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>polarityPositive</key>
+                                        <entry class="sophy.core.data.meta.SPBooleanMetaDataItem">
+                                            <data class="java.lang.Boolean"/>true<name class="java.lang.String"/>polarityPositive<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="3">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>acquisition mode</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMAcqMode">
+                                            <acqModes class="java.util.LinkedHashMap">
+                                                <mapArray class="[Lsophy.core.xml.SPMapEntry;">
+                                                    <element ID="0">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>1</key>
+                                                            <entry class="java.lang.String">
+                                                                <String class="java.lang.String"/>ACQSTART_TIMERSTOP</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="1">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>4</key>
+                                                            <entry class="java.lang.String">
+                                                                <String class="java.lang.String"/>ACQSTART_SWTRIGSTOP</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="2">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>16</key>
+                                                            <entry class="java.lang.String">
+                                                                <String class="java.lang.String"/>HWTRIGSTART_TIMERSTOP</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="3">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>32</key>
+                                                            <entry class="java.lang.String">
+                                                                <String class="java.lang.String"/>HWTRIGSTART_HWTRIGSTOP</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="4">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>64</key>
+                                                            <entry class="java.lang.String">
+                                                                <String class="java.lang.String"/>SWTRIGSTART_TIMERSTOP</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="5">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>128</key>
+                                                            <entry class="java.lang.String">
+                                                                <String class="java.lang.String"/>SWTRIGSTART_SWTRIGSTOP</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="6">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>512</key>
+                                                            <entry class="java.lang.String">
+                                                                <String class="java.lang.String"/>SWTRIGMASTER_HWTRIGSLAVE</entry>
+                                                        </object>
+                                                    </element>
+                                                </mapArray>
+                                            </acqModes>
+                                            <data class="java.lang.Integer"/>32<name class="java.lang.String"/>acquisition mode<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                    <element ID="1">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                    <element ID="2">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="4">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>acqCount</key>
+                                        <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                            <data class="java.lang.Integer"/>105<name class="java.lang.String"/>acqCount<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="5">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>time</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>1.0<name class="java.lang.String"/>time<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                            </mapArray>
+                        </data>
+                        <name class="java.lang.String"/>acquisition parameters<flags class="java.util.ArrayList">
+                            <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                <element ID="0">
+                                    <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                </element>
+                                <element ID="1">
+                                    <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                </element>
+                            </collectionArray>
+                        </flags>
+                        <editable class="java.lang.Boolean"/>false</entry>
+                </object>
+            </element>
+            <element ID="6">
+                <object class="sophy.core.xml.SPMapEntry">
+                    <key class="java.lang.String">
+                        <String class="java.lang.String"/>device info</key>
+                    <entry class="sophy.medipix.drivers.pxm.SPPXMDevInfo">
+                        <data class="java.util.LinkedHashMap">
+                            <mapArray class="[Lsophy.core.xml.SPMapEntry;">
+                                <element ID="0">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>supported acq modes</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMSupportedAcqModes">
+                                            <data class="java.util.LinkedHashMap">
+                                                <mapArray class="[Lsophy.core.xml.SPMapEntry;">
+                                                    <element ID="0">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>1</key>
+                                                            <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                                                <data class="java.lang.Integer"/>1<name class="java.lang.String"/>ACQSTART_TIMERSTOP<flags class="java.util.ArrayList"/>
+                                                                <editable class="java.lang.Boolean"/>false</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="1">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>4</key>
+                                                            <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                                                <data class="java.lang.Integer"/>4<name class="java.lang.String"/>ACQSTART_SWTRIGSTOP<flags class="java.util.ArrayList"/>
+                                                                <editable class="java.lang.Boolean"/>false</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="2">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>16</key>
+                                                            <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                                                <data class="java.lang.Integer"/>16<name class="java.lang.String"/>HWTRIGSTART_TIMERSTOP<flags class="java.util.ArrayList"/>
+                                                                <editable class="java.lang.Boolean"/>false</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="3">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>32</key>
+                                                            <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                                                <data class="java.lang.Integer"/>32<name class="java.lang.String"/>HWTRIGSTART_HWTRIGSTOP<flags class="java.util.ArrayList"/>
+                                                                <editable class="java.lang.Boolean"/>false</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="4">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>64</key>
+                                                            <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                                                <data class="java.lang.Integer"/>64<name class="java.lang.String"/>SWTRIGSTART_TIMERSTOP<flags class="java.util.ArrayList"/>
+                                                                <editable class="java.lang.Boolean"/>false</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="5">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>128</key>
+                                                            <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                                                <data class="java.lang.Integer"/>128<name class="java.lang.String"/>SWTRIGSTART_SWTRIGSTOP<flags class="java.util.ArrayList"/>
+                                                                <editable class="java.lang.Boolean"/>false</entry>
+                                                        </object>
+                                                    </element>
+                                                    <element ID="6">
+                                                        <object class="sophy.core.xml.SPMapEntry">
+                                                            <key class="java.lang.Integer">
+                                                                <Number class="java.lang.Integer"/>512</key>
+                                                            <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                                                <data class="java.lang.Integer"/>512<name class="java.lang.String"/>SWTRIGMASTER_HWTRIGSLAVE<flags class="java.util.ArrayList"/>
+                                                                <editable class="java.lang.Boolean"/>false</entry>
+                                                        </object>
+                                                    </element>
+                                                </mapArray>
+                                            </data>
+                                            <name class="java.lang.String"/>supported acq modes<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="1">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>pixCount</key>
+                                        <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                            <data class="java.lang.Integer"/>262144<name class="java.lang.String"/>pixCount<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="2">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>rowLen</key>
+                                        <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                            <data class="java.lang.Integer"/>512<name class="java.lang.String"/>rowLen<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="3">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>numberOfChips</key>
+                                        <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                            <data class="java.lang.Integer"/>4<name class="java.lang.String"/>numberOfChips<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="4">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>numberOfRows</key>
+                                        <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                            <data class="java.lang.Integer"/>2<name class="java.lang.String"/>numberOfRows<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="5">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>mpxType</key>
+                                        <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                            <data class="java.lang.Integer"/>3<name class="java.lang.String"/>mpxType<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="6">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>chipboardID</key>
+                                        <entry class="sophy.core.data.meta.SPStringMetaDataItem">
+                                            <data class="java.lang.String"/>0_G10-W0242-TPX_E10-W0242-TPX_D09-W0242-TPX_I10-W0242-TPX<name class="java.lang.String"/>chipboardID<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="7">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>ifaceName</key>
+                                        <entry class="sophy.core.data.meta.SPStringMetaDataItem">
+                                            <data class="java.lang.String"/>Relaxd<name class="java.lang.String"/>ifaceName<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="8">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>suppCallback</key>
+                                        <entry class="sophy.core.data.meta.SPBooleanMetaDataItem">
+                                            <data class="java.lang.Boolean"/>true<name class="java.lang.String"/>suppCallback<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="9">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>clockReadout</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>125.0<name class="java.lang.String"/>clockReadout<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="10">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>clockTimepix</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>100.0<name class="java.lang.String"/>clockTimepix<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="11">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>timerMinVal</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>1.0E-5<name class="java.lang.String"/>timerMinVal<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="12">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>timerMaxVal</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>42949.67295<name class="java.lang.String"/>timerMaxVal<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="13">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>timerStep</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>1.0E-5<name class="java.lang.String"/>timerStep<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="14">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>maxPulseCount</key>
+                                        <entry class="sophy.core.data.meta.SPIntegerMetaDataItem">
+                                            <data class="java.lang.Integer"/>10000<name class="java.lang.String"/>maxPulseCount<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="15">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>maxPulseHeight</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>1.2<name class="java.lang.String"/>maxPulseHeight<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="16">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>maxPulsePeriod</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>0.002<name class="java.lang.String"/>maxPulsePeriod<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="17">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>extDacMinV</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>0.0<name class="java.lang.String"/>extDacMinV<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="18">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>extDacMaxV</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>3.0<name class="java.lang.String"/>extDacMaxV<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="19">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.String">
+                                            <String class="java.lang.String"/>extDacStep</key>
+                                        <entry class="sophy.core.data.meta.SPDoubleMetaDataItem">
+                                            <data class="java.lang.Double"/>7.326007326007326E-4<name class="java.lang.String"/>extDacStep<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                            </mapArray>
+                        </data>
+                        <name class="java.lang.String"/>device info<flags class="java.util.ArrayList">
+                            <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                <element ID="0">
+                                    <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                </element>
+                                <element ID="1">
+                                    <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                </element>
+                            </collectionArray>
+                        </flags>
+                        <editable class="java.lang.Boolean"/>false</entry>
+                </object>
+            </element>
+            <element ID="7">
+                <object class="sophy.core.xml.SPMapEntry">
+                    <key class="java.lang.String">
+                        <String class="java.lang.String"/>HW Info 00</key>
+                    <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfo">
+                        <data class="java.util.LinkedHashMap">
+                            <mapArray class="[Lsophy.core.xml.SPMapEntry;">
+                                <element ID="0">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>0</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>1915</data>
+                                            <name class="java.lang.String"/>HW-lib version<description class="java.lang.String"/>Hardware-lib version<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="1">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>1</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>193</data>
+                                            <name class="java.lang.String"/>FW version<description class="java.lang.String"/>Relaxd firmware version<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="2">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>2</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.String">
+                                                <String class="java.lang.String"/>192.168.33.175</data>
+                                            <name class="java.lang.String"/>IP Address<description class="java.lang.String"/>Relaxd IP Address<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="3">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>3</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>52753</data>
+                                            <name class="java.lang.String"/>IP Port number<description class="java.lang.String"/>Relaxd IP Port number<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="4">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>4</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.String">
+                                                <String class="java.lang.String"/>NOT USED</data>
+                                            <name class="java.lang.String"/>Image file name<description class="java.lang.String"/>Data file name for image<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="5">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>5</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>40</data>
+                                            <name class="java.lang.String"/>BoardTemperature<description class="java.lang.String"/>Board temperature [C]<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="6">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>6</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>34</data>
+                                            <name class="java.lang.String"/>DetectorTemperature<description class="java.lang.String"/>Detector temperature [C]<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="7">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>7</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Double">
+                                                <Number class="java.lang.Double"/>1.902353048324585</data>
+                                            <name class="java.lang.String"/>MpixVDD<description class="java.lang.String"/>Medipix digital voltage [Vadc]<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="8">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>8</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Double">
+                                                <Number class="java.lang.Double"/>2.1741175651550293</data>
+                                            <name class="java.lang.String"/>MpixVDDA<description class="java.lang.String"/>Medipix analog voltage [Vadc]<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="9">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>9</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Double">
+                                                <Number class="java.lang.Double"/>0.0</data>
+                                            <name class="java.lang.String"/>TestPulseLow<description class="java.lang.String"/>Test pulse voltage low [V]<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="10">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>10</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Double">
+                                                <Number class="java.lang.Double"/>0.0</data>
+                                            <name class="java.lang.String"/>TestPulseHigh<description class="java.lang.String"/>Test pulse voltage high [V]<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="11">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>11</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>0</data>
+                                            <name class="java.lang.String"/>TestPulseFreq<description class="java.lang.String"/>Test pulse frequency [0.5kHz]<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="12">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>12</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>0</data>
+                                            <name class="java.lang.String"/>BiasAdjust<description class="java.lang.String"/>Sensor bias voltage adjustment [0..100%]<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="13">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>13</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>7</data>
+                                            <name class="java.lang.String"/>MpixVddAdjust<description class="java.lang.String"/>Medipix digital voltage adjustment [0..100%] (ca 1.8-2.3V)<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="14">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>14</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Double">
+                                                <Number class="java.lang.Double"/>0.7894117832183838</data>
+                                            <name class="java.lang.String"/>MpixAnalogCurrent<description class="java.lang.String"/>Medipix analog current [Vadc]<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="15">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>15</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Double">
+                                                <Number class="java.lang.Double"/>0.1035294160246849</data>
+                                            <name class="java.lang.String"/>MpixDigitalCurrent<description class="java.lang.String"/>Medipix digital current [Vadc]<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="16">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>16</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="[J" externalObject="">
+                                                <label class="java.lang.String"/>1_38cea11e-89b5-405d-8db8-291fafe46d5c_long[]</data>
+                                            <name class="java.lang.String"/>ChipID<description class="java.lang.String"/>Chip identifier (24-bits)<flags class="java.util.ArrayList"/>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="17">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>17</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.String">
+                                                <String class="java.lang.String"/>G10-W0242-TPX E10-W0242-TPX D09-W0242-TPX I10-W0242-TPX</data>
+                                            <name class="java.lang.String"/>ChipNames<description class="java.lang.String"/>ChipIDs translated to names<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>false</entry>
+                                    </object>
+                                </element>
+                                <element ID="18">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>18</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>0</data>
+                                            <name class="java.lang.String"/>FirstChipNumber<description class="java.lang.String"/>First chip number<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="19">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>19</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Boolean">
+                                                <Boolean class="java.lang.Boolean"/>false</data>
+                                            <name class="java.lang.String"/>LogVerbose<description class="java.lang.String"/>Logging verbose<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="20">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>20</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Boolean">
+                                                <Boolean class="java.lang.Boolean"/>true</data>
+                                            <name class="java.lang.String"/>ParReadout<description class="java.lang.String"/>Parallel readout<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="21">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>21</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Boolean">
+                                                <Boolean class="java.lang.Boolean"/>false</data>
+                                            <name class="java.lang.String"/>StorePixelsCfg<description class="java.lang.String"/>Store next pixels configuration<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="22">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>22</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Boolean">
+                                                <Boolean class="java.lang.Boolean"/>false</data>
+                                            <name class="java.lang.String"/>StoreDacs<description class="java.lang.String"/>Store current DAC configuration<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="23">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>23</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Boolean">
+                                                <Boolean class="java.lang.Boolean"/>false</data>
+                                            <name class="java.lang.String"/>EraseStoredConfig<description class="java.lang.String"/>Erase stored pixels+DAC configuration<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="24">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>24</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>2</data>
+                                            <name class="java.lang.String"/>ConfTpxClock<description class="java.lang.String"/>Timepix measurement clock (MHz: 0=100 1=50 2=10 3=Ext)<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="25">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>25</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Boolean">
+                                                <Boolean class="java.lang.Boolean"/>false</data>
+                                            <name class="java.lang.String"/>ConfRoClock125MHz<description class="java.lang.String"/>Readout clock (True=150MHz False=65.2MHz)<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="26">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>26</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Boolean">
+                                                <Boolean class="java.lang.Boolean"/>false</data>
+                                            <name class="java.lang.String"/>ConfTpxPreclocks<description class="java.lang.String"/>Use preclocks when a trigger is received<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="27">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>27</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Boolean">
+                                                <Boolean class="java.lang.Boolean"/>false</data>
+                                            <name class="java.lang.String"/>ConfHvBiasDisable<description class="java.lang.String"/>Disables sensor bias supply (True=supply off False=supply on)<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="28">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>28</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>0</data>
+                                            <name class="java.lang.String"/>TriggerType<description class="java.lang.String"/>Trigger type (0=Negative, 1=Positive, 2=Pulse)<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="29">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>29</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Long">
+                                                <Number class="java.lang.Long"/>2</data>
+                                            <name class="java.lang.String"/>LostRowRetryCnt<description class="java.lang.String"/>Lost row retry count<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                                <element ID="30">
+                                    <object class="sophy.core.xml.SPMapEntry">
+                                        <key class="java.lang.Integer">
+                                            <Number class="java.lang.Integer"/>30</key>
+                                        <entry class="sophy.medipix.drivers.pxm.SPPXMHWInfoItem">
+                                            <data class="java.lang.Boolean">
+                                                <Boolean class="java.lang.Boolean"/>true</data>
+                                            <name class="java.lang.String"/>InvalidLutZero<description class="java.lang.String"/>Invalid lookup table entry is zero<flags class="java.util.ArrayList">
+                                                <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                                    <element ID="0">
+                                                        <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                                    </element>
+                                                </collectionArray>
+                                            </flags>
+                                            <editable class="java.lang.Boolean"/>true</entry>
+                                    </object>
+                                </element>
+                            </mapArray>
+                        </data>
+                        <name class="java.lang.String"/>HW Info 0<flags class="java.util.ArrayList">
+                            <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
+                                <element ID="0">
+                                    <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                </element>
+                                <element ID="1">
+                                    <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
+                                </element>
+                            </collectionArray>
+                        </flags>
+                        <editable class="java.lang.Boolean"/>false</entry>
+                </object>
+            </element>
+            <element ID="8">
                 <object class="sophy.core.xml.SPMapEntry">
                     <key class="java.lang.String">
                         <String class="java.lang.String"/>chips</key>
@@ -218,7 +1196,7 @@
                                                                                 <key class="java.lang.String">
                                                                                     <String class="java.lang.String"/>THL</key>
                                                                                 <entry class="sophy.medipix.SPMPXDAC">
-                                                                                    <minValue class="java.lang.Integer"/>0<maxValue class="java.lang.Integer"/>1023<defaultValue class="java.lang.Integer"/>250<data class="java.lang.Integer"/>250<name class="java.lang.String"/>THL<flags class="java.util.ArrayList">
+                                                                                    <minValue class="java.lang.Integer"/>0<maxValue class="java.lang.Integer"/>1023<defaultValue class="java.lang.Integer"/>250<data class="java.lang.Integer"/>400<name class="java.lang.String"/>THL<flags class="java.util.ArrayList">
                                                                                         <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
                                                                                             <element ID="0">
                                                                                                 <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
@@ -439,7 +1417,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>0<bitSize class="java.lang.Integer"/>1<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>1_19317274-1cdd-4c83-99d8-dc7a4bd6fa98_short[]</data>
+                                                                                            <label class="java.lang.String"/>2_0ce76671-8f48-4a0d-974b-4807c11cddae_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>maskBits<description class="java.lang.String"/>Map of ignored pixels<flags class="java.util.ArrayList"/>
@@ -453,7 +1431,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>1<bitSize class="java.lang.Integer"/>1<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>2_e097c26f-0fc0-4df9-be10-62e4b1ced6d5_short[]</data>
+                                                                                            <label class="java.lang.String"/>3_46cd91b0-f475-4999-a99d-f4fb0991f094_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>testBits<description class="java.lang.String"/>Map of test bit settings<flags class="java.util.ArrayList"/>
@@ -467,7 +1445,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>2<bitSize class="java.lang.Integer"/>4<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>3_f993b2ab-10e9-409a-908d-a423de6abb2f_short[]</data>
+                                                                                            <label class="java.lang.String"/>4_12988e7d-a0d1-45e5-914d-130393402458_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>thlAdj<description class="java.lang.String"/>THL adjustment<flags class="java.util.ArrayList"/>
@@ -490,7 +1468,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>6<bitSize class="java.lang.Integer"/>2<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>4_48300ea7-b09f-4844-8da6-f04657074ab2_short[]</data>
+                                                                                            <label class="java.lang.String"/>5_406c6a7d-73aa-4e8c-9a7c-83ba03f2b239_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>mode<description class="java.lang.String"/>Pixel operation mode<flags class="java.util.ArrayList"/>
@@ -514,7 +1492,7 @@
                                                     </element>
                                                 </mapArray>
                                             </data>
-                                            <name class="java.lang.String"/>TPX 0<flags class="java.util.ArrayList">
+                                            <name class="java.lang.String"/>TPX chip 0<flags class="java.util.ArrayList">
                                                 <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
                                                     <element ID="0">
                                                         <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
@@ -654,7 +1632,7 @@
                                                                                 <key class="java.lang.String">
                                                                                     <String class="java.lang.String"/>THL</key>
                                                                                 <entry class="sophy.medipix.SPMPXDAC">
-                                                                                    <minValue class="java.lang.Integer"/>0<maxValue class="java.lang.Integer"/>1023<defaultValue class="java.lang.Integer"/>250<data class="java.lang.Integer"/>250<name class="java.lang.String"/>THL<flags class="java.util.ArrayList">
+                                                                                    <minValue class="java.lang.Integer"/>0<maxValue class="java.lang.Integer"/>1023<defaultValue class="java.lang.Integer"/>250<data class="java.lang.Integer"/>400<name class="java.lang.String"/>THL<flags class="java.util.ArrayList">
                                                                                         <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
                                                                                             <element ID="0">
                                                                                                 <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
@@ -875,7 +1853,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>0<bitSize class="java.lang.Integer"/>1<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>5_6d06dc51-d0d9-4f26-9504-64a4e942eee1_short[]</data>
+                                                                                            <label class="java.lang.String"/>6_8c8045fa-58f5-4169-84dc-f33c2551b183_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>maskBits<description class="java.lang.String"/>Map of ignored pixels<flags class="java.util.ArrayList"/>
@@ -889,7 +1867,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>1<bitSize class="java.lang.Integer"/>1<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>6_78e88518-9427-49c3-a830-a7b62f945e27_short[]</data>
+                                                                                            <label class="java.lang.String"/>7_1a38d8ee-f952-452d-8c36-238b67057d83_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>testBits<description class="java.lang.String"/>Map of test bit settings<flags class="java.util.ArrayList"/>
@@ -903,7 +1881,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>2<bitSize class="java.lang.Integer"/>4<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>7_76da8e38-034d-48f2-9981-6974d398f8f4_short[]</data>
+                                                                                            <label class="java.lang.String"/>8_85f06b24-a660-4a8f-b758-eca3c24b9ad3_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>thlAdj<description class="java.lang.String"/>THL adjustment<flags class="java.util.ArrayList"/>
@@ -926,7 +1904,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>6<bitSize class="java.lang.Integer"/>2<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>8_873ede2f-0f2d-4f5f-ace9-3290f95c45d1_short[]</data>
+                                                                                            <label class="java.lang.String"/>9_2d5f4a26-ca9d-4d0e-b84d-7e17334b2e6f_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>mode<description class="java.lang.String"/>Pixel operation mode<flags class="java.util.ArrayList"/>
@@ -950,7 +1928,7 @@
                                                     </element>
                                                 </mapArray>
                                             </data>
-                                            <name class="java.lang.String"/>TPX 1<flags class="java.util.ArrayList">
+                                            <name class="java.lang.String"/>TPX chip 1<flags class="java.util.ArrayList">
                                                 <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
                                                     <element ID="0">
                                                         <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
@@ -1090,7 +2068,7 @@
                                                                                 <key class="java.lang.String">
                                                                                     <String class="java.lang.String"/>THL</key>
                                                                                 <entry class="sophy.medipix.SPMPXDAC">
-                                                                                    <minValue class="java.lang.Integer"/>0<maxValue class="java.lang.Integer"/>1023<defaultValue class="java.lang.Integer"/>250<data class="java.lang.Integer"/>250<name class="java.lang.String"/>THL<flags class="java.util.ArrayList">
+                                                                                    <minValue class="java.lang.Integer"/>0<maxValue class="java.lang.Integer"/>1023<defaultValue class="java.lang.Integer"/>250<data class="java.lang.Integer"/>400<name class="java.lang.String"/>THL<flags class="java.util.ArrayList">
                                                                                         <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
                                                                                             <element ID="0">
                                                                                                 <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
@@ -1311,7 +2289,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>0<bitSize class="java.lang.Integer"/>1<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>9_e8bc3f3e-af3e-43e6-87fd-e205b322988e_short[]</data>
+                                                                                            <label class="java.lang.String"/>10_a701fced-11d1-4f3c-bef1-1d539c9fd21d_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>maskBits<description class="java.lang.String"/>Map of ignored pixels<flags class="java.util.ArrayList"/>
@@ -1325,7 +2303,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>1<bitSize class="java.lang.Integer"/>1<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>10_17f9e370-0706-4e43-963a-b6fe8f8c296b_short[]</data>
+                                                                                            <label class="java.lang.String"/>11_c9950eb3-f00f-4f6c-afda-b8f4c8b30a8c_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>testBits<description class="java.lang.String"/>Map of test bit settings<flags class="java.util.ArrayList"/>
@@ -1339,7 +2317,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>2<bitSize class="java.lang.Integer"/>4<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>11_907eac50-bbfc-4d8f-af95-bc1f685b90c2_short[]</data>
+                                                                                            <label class="java.lang.String"/>12_c42a2141-2c00-40a9-a19b-d8bf9c30064e_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>thlAdj<description class="java.lang.String"/>THL adjustment<flags class="java.util.ArrayList"/>
@@ -1362,7 +2340,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>6<bitSize class="java.lang.Integer"/>2<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>12_e906df8c-a32c-434a-a409-c43353e1dcc5_short[]</data>
+                                                                                            <label class="java.lang.String"/>13_ee8acbb7-f041-4c7b-8f31-884e95c97e0c_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>mode<description class="java.lang.String"/>Pixel operation mode<flags class="java.util.ArrayList"/>
@@ -1386,7 +2364,7 @@
                                                     </element>
                                                 </mapArray>
                                             </data>
-                                            <name class="java.lang.String"/>TPX 2<flags class="java.util.ArrayList">
+                                            <name class="java.lang.String"/>TPX chip 2<flags class="java.util.ArrayList">
                                                 <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
                                                     <element ID="0">
                                                         <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
@@ -1526,7 +2504,7 @@
                                                                                 <key class="java.lang.String">
                                                                                     <String class="java.lang.String"/>THL</key>
                                                                                 <entry class="sophy.medipix.SPMPXDAC">
-                                                                                    <minValue class="java.lang.Integer"/>0<maxValue class="java.lang.Integer"/>1023<defaultValue class="java.lang.Integer"/>250<data class="java.lang.Integer"/>250<name class="java.lang.String"/>THL<flags class="java.util.ArrayList">
+                                                                                    <minValue class="java.lang.Integer"/>0<maxValue class="java.lang.Integer"/>1023<defaultValue class="java.lang.Integer"/>250<data class="java.lang.Integer"/>400<name class="java.lang.String"/>THL<flags class="java.util.ArrayList">
                                                                                         <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
                                                                                             <element ID="0">
                                                                                                 <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
@@ -1747,7 +2725,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>0<bitSize class="java.lang.Integer"/>1<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>13_56ef17b1-42e7-4f9d-8e0a-3dea1b69ddf9_short[]</data>
+                                                                                            <label class="java.lang.String"/>14_eb5e365a-102b-41e4-aca4-7107696e5fd5_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>maskBits<description class="java.lang.String"/>Map of ignored pixels<flags class="java.util.ArrayList"/>
@@ -1761,7 +2739,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>1<bitSize class="java.lang.Integer"/>1<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>14_2d08ce77-72c5-444b-9b49-0d4695f28ce9_short[]</data>
+                                                                                            <label class="java.lang.String"/>15_0d055aac-9467-4071-ae74-343c89c9dcc0_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>testBits<description class="java.lang.String"/>Map of test bit settings<flags class="java.util.ArrayList"/>
@@ -1775,7 +2753,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>2<bitSize class="java.lang.Integer"/>4<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>15_fd9fc9dc-0c0a-420e-b00b-e44182413ebf_short[]</data>
+                                                                                            <label class="java.lang.String"/>16_2c151a09-3bfa-44a6-8deb-b28d3290676c_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>thlAdj<description class="java.lang.String"/>THL adjustment<flags class="java.util.ArrayList"/>
@@ -1798,7 +2776,7 @@
                                                                                 <entry class="sophy.medipix.SPBitMaskMetaDataItem">
                                                                                     <bitOffset class="java.lang.Integer"/>6<bitSize class="java.lang.Integer"/>2<data class="sophy.core.data.SPshortVector2D">
                                                                                         <data class="[S" externalObject="">
-                                                                                            <label class="java.lang.String"/>16_9eb199f7-8d95-4ba2-be0c-9e8a9fad85a3_short[]</data>
+                                                                                            <label class="java.lang.String"/>17_a0baa657-c1c5-4589-baa1-6ad11faa9b87_short[]</data>
                                                                                         <parallelLoopSplitSize class="java.lang.Integer"/>500000<rows class="java.lang.Integer"/>256<columns class="java.lang.Integer"/>256<indexer class="sophy.medipix.SPMPXChipIndexer2D"/>
                                                                                     </data>
                                                                                     <name class="java.lang.String"/>mode<description class="java.lang.String"/>Pixel operation mode<flags class="java.util.ArrayList"/>
@@ -1822,7 +2800,7 @@
                                                     </element>
                                                 </mapArray>
                                             </data>
-                                            <name class="java.lang.String"/>TPX 3<flags class="java.util.ArrayList">
+                                            <name class="java.lang.String"/>TPX chip 3<flags class="java.util.ArrayList">
                                                 <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
                                                     <element ID="0">
                                                         <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>
@@ -1850,7 +2828,7 @@
                         <editable class="java.lang.Boolean"/>false</entry>
                 </object>
             </element>
-            <element ID="6">
+            <element ID="9">
                 <object class="sophy.core.xml.SPMapEntry">
                     <key class="java.lang.String">
                         <String class="java.lang.String"/>columnWidths</key>
@@ -1859,7 +2837,7 @@
                         <editable class="java.lang.Boolean"/>false</entry>
                 </object>
             </element>
-            <element ID="7">
+            <element ID="10">
                 <object class="sophy.core.xml.SPMapEntry">
                     <key class="java.lang.String">
                         <String class="java.lang.String"/>rowWidths</key>
@@ -1868,7 +2846,7 @@
                         <editable class="java.lang.Boolean"/>false</entry>
                 </object>
             </element>
-            <element ID="8">
+            <element ID="11">
                 <object class="sophy.core.xml.SPMapEntry">
                     <key class="java.lang.String">
                         <String class="java.lang.String"/>requiredDataType</key>
@@ -1879,7 +2857,7 @@
                         <editable class="java.lang.Boolean"/>false</entry>
                 </object>
             </element>
-            <element ID="9">
+            <element ID="12">
                 <object class="sophy.core.xml.SPMapEntry">
                     <key class="java.lang.String">
                         <String class="java.lang.String"/>requiredErrorType</key>
@@ -1890,7 +2868,7 @@
                         <editable class="java.lang.Boolean"/>false</entry>
                 </object>
             </element>
-            <element ID="10">
+            <element ID="13">
                 <object class="sophy.core.xml.SPMapEntry">
                     <key class="java.lang.String">
                         <String class="java.lang.String"/>image transformation</key>
@@ -1918,7 +2896,7 @@
                         <editable class="java.lang.Boolean"/>false</entry>
                 </object>
             </element>
-            <element ID="11">
+            <element ID="14">
                 <object class="sophy.core.xml.SPMapEntry">
                     <key class="java.lang.String">
                         <String class="java.lang.String"/>pixelCalibration</key>
@@ -1929,7 +2907,7 @@
             </element>
         </mapArray>
     </data>
-    <name class="java.lang.String"/>SoPhy TPX Dummy Quad<flags class="java.util.ArrayList">
+    <name class="java.lang.String"/>0_G10-W0242-TPX_E10-W0242-TPX_D09-W0242-TPX_I10-W0242-TPX<flags class="java.util.ArrayList">
         <collectionArray class="[Lsophy.core.data.meta.SPMetaDataFlag;">
             <element ID="0">
                 <object class="sophy.imaging.SPStoreWithFrameMetaDataFlag"/>

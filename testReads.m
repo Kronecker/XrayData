@@ -1,18 +1,14 @@
-fileFormatString='scan%04d.dat';
-if(~exist('fileNum','var'))
-    fileNum=160;
+if(~exist('fileNum','var'))    
+    fileFormatString='scan%04dt.dat';
 end
-path='SampleData';
+    
+if(~exist('fileNum','var'))
+    fileNum=88;
+end
+path='sampleData\sample2\';
 
-[t]=readFile(fileFormatString,fileNum, path )
-%[t]=readFile('scan0126.dat', path, fileFormatString)
+[t]=readFile(fileFormatString,fileNum, path);
 
-%t=readXrayScanXfel(fileFormatString, fileNum, path)
-
-
-
-
-%plot(data(:,1),data(:,5));
 
 
 
